@@ -16,6 +16,10 @@ export default function App() {
         <AddTodo/>
 
         <TodoItem/>
+        <TodoItem/>
+        <TodoItem/>
+        <TodoItem/>
+        <TodoItem/>
 
         <StatusBar style="auto" />
 
