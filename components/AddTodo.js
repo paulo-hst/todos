@@ -1,14 +1,28 @@
-import React from 'react'
-import { View, Text, TextInput, StyleSheet, TouchableOpacity,  } from 'react-native'
+import React, { useState } from 'react'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import { MaterialCommunityIcons } from 'react-native-vector-icons'
 import { colors } from '../utils/index'
 
-
 export default function AddTodo(){
+    // cria o valor inicial do todo e a função que realiza alterações neste todo
+    const [ todo, setTodo ] = useState('')
+
+    function newTodo(){
+        // recebe o valor digitado no input (novo todo) e atribui na variável valor
+        // const valor = todo
+        console.log(todo)
+    }
+
     return(
         <View style={styles.container}>
-         <TextInput style={styles.input} value='Digite aqui o to-do' />
-         <TouchableOpacity style={styles.button} >
+         <TextInput 
+            style={styles.input} 
+            placeholder='Digite aqui o to-do'
+            // atualiza o valor do todo com o que está sendi digitado
+            onChangeText={todo => setTodo(todo)}
+            defaultValue={todo} 
+         />
+         <TouchableOpacity style={styles.button} onPress={newTodo}>
              <MaterialCommunityIcons name='plus-circle' size={35} color={colors.EXTRA_COLOR} />
          </TouchableOpacity>
         </View>
