@@ -6,14 +6,18 @@ import { colors } from '../utils/index'
 
 export default function TodoItem(){
 
-    const todos = [ 'Estudar React Native', 'Estudar JavaScript', 'Estudar HTML', 'Estudar CSS', 'Estudar Python' ]
+    const todos = [ 'Estudar React Native', 'Estudar JavaScript', 'Estudar HTML', 'Estudar CSS', 'Estudar Python', 'Estudar React.js', 'Estudar Node.js', 'Estudar Java', 'Estudar Git' ]
 
     const teste = Math.floor(Math.random() * todos.length)
+
+    todos.forEach(element => {
+        console.log(element)
+    })
 
     return(
         <View style={styles.container}>
             <Text style={styles.text}>
-                { teste + ' - ' + todos[teste] }
+                {todos[teste]}
             </Text>
             <TouchableOpacity style={styles.button}>
                 <MaterialCommunityIcons name='delete-outline' size={35} color={colors.SECONDARY_COLOR} />

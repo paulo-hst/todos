@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import { colors } from '../utils/index'
-import { AppLoading } from 'expo';
 import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
 export default function Title(){
