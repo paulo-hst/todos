@@ -5,7 +5,7 @@
 </h1>
  
 ## Objetivo
-App que registra tarefas a fazer. App para fins de exercício
+App que registra tarefas a fazer. Criado em React Native e Expo apenas para fins de exercício.
 
 ## Tecnologias
 - React Native
