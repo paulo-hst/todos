@@ -17,13 +17,14 @@ export default function AddTodo(){
         <View style={styles.container}>
          <TextInput 
             style={styles.input} 
-            placeholder='Digite aqui o to-do'
-            // atualiza o valor do todo com o que está sendi digitado
+            placeholder='Digite aqui uma nova tarefa'
+            // atualiza o valor do todo com o que está sendo digitado
             onChangeText={todo => setTodo(todo)}
             defaultValue={todo} 
+            
          />
          <TouchableOpacity style={styles.button} onPress={newTodo}>
-             <MaterialCommunityIcons name='plus-circle' size={35} color={colors.EXTRA_COLOR} />
+             <MaterialCommunityIcons name='plus-circle' size={35} color={colors.SECONDARY_COLOR} />
          </TouchableOpacity>
         </View>
     )
@@ -32,7 +33,7 @@ export default function AddTodo(){
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginTop: 20,
+        marginTop: 35,
     },
 
     input: {
@@ -43,12 +44,14 @@ const styles = StyleSheet.create({
         backgroundColor: colors.PRIMARY_COLOR,
         
         borderWidth: 1,
-        borderColor: colors.EXTRA_COLOR,
+        borderColor: colors.SECONDARY_COLOR,
         borderRadius: 5,
-
+        
+        fontSize: 20,
     },  
 
     button: {
-        justifyContent: 'center'
+        justifyContent: 'center',
+        right: 1,
     },  
 })
